@@ -25,7 +25,7 @@ const sections = [
             'Methods for assessing LLM cultural knowledge.',
             'Interpretability of cultural representations.',
         ],
-        image: '/inglehert.jpg', // Image for this section
+        image: 'inglehert.jpg', // Image for this section
         imageCaption: ""
     },
     { 
@@ -45,7 +45,7 @@ const sections = [
             'Cross-cultural content adaptation techniques.',
             'Evaluating and addressing cross-cultural harms.',
         ],
-        image: '/cy.jpeg', // Image for this section
+        image: 'cy.jpeg', // Image for this section
         imageCaption: ""
     }
 ]

@@ -16,7 +16,7 @@ const sections = [
             'How can we better design music oriented evaluation metrics?',
             'What correlations can we derive between different music styles and discover new music styles from musicological perspective?',
         ],
-        image: '/MY_Data.png', // Image for this section
+        image: 'MY_Data.png', // Image for this section
         imageCaption: "Region & Genre wise distribution of music datasets."
     },
     { 
@@ -28,7 +28,7 @@ const sections = [
             'Folk, Hip-hop only comprise 1.3 & 2.2% of the total representation in literature.',
             'Classical music representation is 44% with Pop and Rock also having more than 10% representation.',
         ],
-        image: '/musicforall.png', // Image for this section
+        image: 'musicforall.png', // Image for this section
         imageCaption: "Genre diversity across different datasets."
     },
     { 
@@ -39,7 +39,7 @@ const sections = [
             'Freezing all modules except the adapters in the models leading to 0.1% trainable parameters.',
             'Finding the optimal configuration of adapters for different dataset sizes across more genres.'
         ],
-        image: '/adapter.png', // Image for this section
+        image: 'adapter.png', // Image for this section
         imageCaption: "Adapter settings for cultural music generation for MusicGen & Mustango."
     },
 ]
