@@ -23,8 +23,7 @@ jobs:
         working-directory: ./culture_lab_react
  
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-        working-directory: ./culture_lab_react
-        env:
-          CI: false
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./culture_lab_react/build
