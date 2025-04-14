@@ -104,7 +104,7 @@ export default function AppAppBar() {
                 }}
                 onClick={() => navigate("/")}
               >
-                QUBIC
+                QuBIC
               </Typography>
             </Box>
 
