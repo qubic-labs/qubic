@@ -26,5 +26,5 @@ jobs:
         run: npm run deploy
         working-directory: ./culture_lab_react
         env:
-          CI: true
+          CI: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
