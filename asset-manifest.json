@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/qubic/static/css/main.5f71cacb.css",
-    "main.js": "/qubic/static/js/main.7f8081f1.js",
+    "main.js": "/qubic/static/js/main.a880f6e7.js",
     "static/js/453.8a5d23ed.chunk.js": "/qubic/static/js/453.8a5d23ed.chunk.js",
     "static/media/logo.svg": "/qubic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/slick.svg": "/qubic/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/qubic/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/qubic/index.html",
     "main.5f71cacb.css.map": "/qubic/static/css/main.5f71cacb.css.map",
-    "main.7f8081f1.js.map": "/qubic/static/js/main.7f8081f1.js.map",
+    "main.a880f6e7.js.map": "/qubic/static/js/main.a880f6e7.js.map",
     "453.8a5d23ed.chunk.js.map": "/qubic/static/js/453.8a5d23ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f71cacb.css",
-    "static/js/main.7f8081f1.js"
+    "static/js/main.a880f6e7.js"
   ]
 }
