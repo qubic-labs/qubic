@@ -1,11 +1,11 @@
 name: Deploy React App to GitHub Pages
  
- on:
-   push:
+on:
+  push:
      branches:
        - main  # or 'master' if that's your default branch
  
- jobs:
+jobs:
    deploy:
      runs-on: ubuntu-latest
  
