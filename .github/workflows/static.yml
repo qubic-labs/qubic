@@ -25,15 +25,15 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('client/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('culture_lab_react/package-lock.json') }}
 
       - name: 📦 Install dependencies
         run: npm install
-        working-directory: ./client
+        working-directory: ./culture_lab_react
 
       - name: 🚀 Deploy to GitHub Pages
         run: npm run deploy
-        working-directory: ./client
+        working-directory: ./culture_lab_react
         env:
           CI: false  # disables strict mode so warnings like `no-unused-vars` won't fail the build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # this gives the deploy command push access
