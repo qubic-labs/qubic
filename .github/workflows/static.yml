@@ -1,39 +1,30 @@
 name: Deploy React App to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Cache Node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('client/package-lock.json') }}
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./client
-
-      - name: Deploy to GitHub Pages
-        run: npm run deploy
-        working-directory: ./client
-        env:
-          CI: false
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
+ on:
+   push:
+     branches:
+       - main  # or 'master' if that's your default branch
+ 
+ jobs:
+   deploy:
+     runs-on: ubuntu-latest
+ 
+     steps:
+       - name: Checkout code
+         uses: actions/checkout@v3
+ 
+       - name: Set up Node.js
+         uses: actions/setup-node@v3
+         with:
+           node-version: '18' # or your version
+ 
+       - name: Install dependencies
+         run: npm install
+         working-directory: ./culture_lab_react
+ 
+       - name: Deploy to GitHub Pages
+         run: npm run deploy
+         working-directory: ./culture_lab_react
+         env:
+           CI: false
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
