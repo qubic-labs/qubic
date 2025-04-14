@@ -1,0 +1,268 @@
+{
+    "pi": [
+      {
+        "name": "Prof. Monojit Choudhury",
+        "title": "Professor, NLP, MBZUAI",
+        "designation": "Professor",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "researchArea": " ",
+        "imageUrl": "monojit(2).png",
+        "profileImage": "monojit(2).png",
+        "website": "https://mbzuai.ac.ae/study/faculty/monojit-choudhury/",
+        "bio": ""
+      }
+    ],
+    "faculty": [
+      {
+        "name": "Prof. Sunayana Sitaram",
+        "title": "Principal Researcher, Microsoft Research",
+        "designation": "Principal Researcher",
+        "department": "",
+        "primaryAffiliation": "Microsoft Research India",
+        "researchArea": " ",
+        "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2018/02/Sunayana_Sitaram.png",
+        "website": "https://www.microsoft.com/en-us/research/people/susitara/"
+      },
+      {
+        "name": "Prof. Kalika Bali",
+        "title": "Principal Researcher, Microsoft Research",
+        "designation": "Principal Researcher",
+        "department": "",
+        "primaryAffiliation": "Microsoft Research India",
+        "researchArea": " ",
+        "imageUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2024/09/kalika_newhighres-scaled.jpg",
+        "website": "https://www.microsoft.com/en-us/research/people/kalikab/"
+      },
+      {
+        "name": "Prof. Tanushree Mitra",
+        "title": "Associate Professor, Information School, University of Washington",
+        "designation": "Associate Professor",
+        "department": "",
+        "primaryAffiliation": "University of Washington",
+        "researchArea": " ",
+        "imageUrl": "https://faculty.washington.edu/tmitra/public/tanu.png",
+        "profileImage": "https://faculty.washington.edu/tmitra/public/tanu.png",
+        "website": "https://faculty.washington.edu/tmitra/"
+      },
+      {
+        "name": "Prof. Somak Aditya",
+        "title": "Assistant Professor, CSE, IIT Kharagpur",
+        "designation": "Assistant Professor",
+        "department": "CSE",
+        "primaryAffiliation": "IIT Kharagpur",
+        "researchArea": " ",
+        "imageUrl": "https://adityasomak.github.io/authors/admin/avatar_hu2b9e2ef8b059e2052408d3b1a09de986_458579_250x250_fill_q90_lanczos_center.jpg",
+        "website": "https://adityasomak.github.io/"
+      }
+    ],
+    "postdocs": [
+      {
+        "name": "Sougata Saha",
+        "title": "Postdoc",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://sougata-ub.github.io/pic_fb.jpeg",
+        "profileImage": "https://sougata-ub.github.io/pic_fb.jpeg",
+        "website": "https://example.com/sougata",
+        "researchInterests": "Multi-cultural AI, Human Behavior"
+      }
+    ],
+    "students": [
+      {
+        "name": "Mukund Choudhary",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "mukund(2).jpg",
+        "profileImage": "mukund(2).jpg",
+        "website": "https://are01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmukundc2k.github.io%2F&data=05%7C02%7CAtharva.Mehta%40mbzuai.ac.ae%7Cdf2af5df5da54635e87408dd7182d2a7%7Cc93272d31b074b3da3b619b34a973915%7C0%7C0%7C638791528892079955%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=Y9%2Bqi99HE7TFttLlBOQ4ThjWLf1nhyrVqivi62ulQzk%3D&reserved=0",
+        "researchInterests": "Cognitive NLP & Sociolinguistics",
+        "bio": "Mukund is a PhD student focusing on understanding how LLMs understand language and how it compares to linguistics. He has been working on projects related to metalinguistic reasoning, low-resource languages, empathy & loneliness, and more. His latest work (under review) explores what makes Linguistics Olympiad style, low-resource language-based, data-constrained puzzles, difficult for LLMs; he finds that LLMs struggle with morphologically complex language-based puzzles (manual morpheme boundary marking helps solvability), and ones that have features that are lesser like English.Before being advised by Prof. Monojit at MBZUAI, Mukund completed a MS Computational Linguistics thesis on Pseudowords (2023), co-advised by Prof. Bapi Raju Surampudi (Cognitive Science Lab) & Dipti Misra Sharma (MT-NLP) at IIIT Hyderabad, India. He has also worked full time as a Data Scientist at Jio, Reliance (2024), as an Intern Applied Scientist at Amazon, Navana, etc. and as a Consultant at JSW. Apart from scrolling his Twitter to find more fun linguistics content, he finds reading about fashion, design studies, comics, etc., very indulging. He also likes listening to R&B songs, watch horror pop media, design quizzes, puzzles, and more!",
+        "github": "https://are01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmukundc2k%2F&data=05%7C02%7CAtharva.Mehta%40mbzuai.ac.ae%7Cdf2af5df5da54635e87408dd7182d2a7%7Cc93272d31b074b3da3b619b34a973915%7C0%7C0%7C638791528892035898%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=TrDJrzfRq4HiMeGe0elfvVnasKwOTOf7w3t21IfP6JU%3D&reserved=0",
+        "linkedin": "https://are01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmukundc2k%2F&data=05%7C02%7CAtharva.Mehta%40mbzuai.ac.ae%7Cdf2af5df5da54635e87408dd7182d2a7%7Cc93272d31b074b3da3b619b34a973915%7C0%7C0%7C638791528892035898%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=TrDJrzfRq4HiMeGe0elfvVnasKwOTOf7w3t21IfP6JU%3D&reserved=0",
+        "scholar": "https://are01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fscholar.google.com%2Fcitations%3Fuser%3D29EdHIgAAAAJ&data=05%7C02%7CAtharva.Mehta%40mbzuai.ac.ae%7Cdf2af5df5da54635e87408dd7182d2a7%7Cc93272d31b074b3da3b619b34a973915%7C0%7C0%7C638791528892068499%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=IOLU80eV1uyyVtPhkK9hP1%2BaW9tYy1Q1Ancg3AbWLuY%3D&reserved=0",
+        "twitter": "https://are01.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2Fmukundc2k&data=05%7C02%7CAtharva.Mehta%40mbzuai.ac.ae%7Cdf2af5df5da54635e87408dd7182d2a7%7Cc93272d31b074b3da3b619b34a973915%7C0%7C0%7C638791528892056641%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=IBJ6yx3zvQLTHOKjilUsduvPr5urPugK09IDDkQPBho%3D&reserved=0"
+      },
+      {
+        "name": "Utkarsh Agarwal",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "utkarsh_agarwal.jpeg",
+        "website": "https://example.com/utkarsh",
+        "researchInterests": "LLM Optimization"
+      },
+      {
+        "name": "Farah Atif",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "farah_atif.jpeg",
+        "website": "https://example.com/farah",
+        "researchInterests": "Sociolinguistics"
+      },
+      {
+        "name": "Amirbek Djanibekov",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Hanan Aldarmaki",
+        "imageUrl": "amir.jpeg",
+        "profileImage": "amir.jpeg",
+        "website": "https://example.com/amirbek",
+        "researchInterests": "Speech Processing, Music Generation"
+      },
+      {
+        "name": "Dhruv Sahnan",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Preslav Nakov",
+        "imageUrl": "dhruv_sahnan.jpeg",
+        "website": "https://example.com/dhruv",
+        "researchInterests": "Argument Mining, Disinformation"
+      },
+      {
+        "name": "Hanin Thaer Al Ghothani",
+        "title": "PhD",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "-",
+        "imageUrl": "Hanin-Thaer-Al-Ghothani.jpg",
+        "website": "https://example.com/hanin",
+        "researchInterests": "Machine Learning"
+      }
+    ],
+    "researchers": [
+      {
+        "name": "Arif Ahmad",
+        "title": "Researcher",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQGaTdKiAnilOg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709497957621?e=1747267200&v=beta&t=2bruKmzqSqRfmUtwJyyzM9jlEGNOj9IJABPHgjOKnTA",
+        "profileImage": "https://media.licdn.com/dms/image/v2/D4D03AQGaTdKiAnilOg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709497957621?e=1747267200&v=beta&t=2bruKmzqSqRfmUtwJyyzM9jlEGNOj9IJABPHgjOKnTA",
+        "website": "https://example.com/arif",
+        "researchInterests": "Ethics"
+      },
+      {
+        "name": "Atharva Mehta",
+        "title": "Researcher",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://media.licdn.com/dms/image/v2/D4D03AQH3PjuJcFVMXg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691767575689?e=1747267200&v=beta&t=cRVof11RCQLa5Rxs3wRRWKcuEcntJKpDT0NHWBT-T0s",
+        "website": "https://example.com/atharva",
+        "researchInterests": "Music Generation & Creative Aesthetics"
+      },
+      {
+        "name": "Saurabh Pandey",
+        "title": "Researcher",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "saurabh_pandey.jpg",
+        "profileImage": "saurabh_pandey.jpg",
+        "website": "https://example.com/saurabh",
+        "researchInterests": "Culture in LLMs & Hate Speech"
+      },
+      {
+        "name": "Shivam Chauhan",
+        "title": "Researcher",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "shivam(2).jpg",
+        "profileImage": "shivam(2).jpg",
+        "website": "https://example.com/shivam",
+        "researchInterests": "Music Generation",
+        "bio": "Research Engineer specializing in Large Language Models, Natural Language Processing, and Computational Music Generation. Currently at MBZUAI, developing Music and Language Models with a focus on efficient adaptation, fairness in representation, and low-resource language modeling. Previously working at Microsoft, contributed to the deployment of language models in real-world ad recommendation systems. Experienced in fine-tuning, model compression, and scalable ML systems."
+      }
+    ],
+    "visiting_students_and_scientists": [
+      {
+        "name": "Hellina Hailu Nigatu",
+        "title": "Visiting Researcher",
+        "titleprimary": "PhD",
+        "primaryAffiliation": "UC Berkeley",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://hhnigatu.github.io//images/profile.png",
+        "website": "https://example.com/hellina",
+        "researchInterests": "-"
+      },
+      {
+        "name": "Sourabrata Mukherjee",
+        "title": "Visiting Researcher",
+        "titleprimary": "PhD",
+        "primaryAffiliation": "Charles University",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://souro.github.io/images/image.jpg",
+        "website": "https://example.com/sourabrata",
+        "researchInterests": "-"
+      },
+      {
+        "name": "Antara Bhattacharya",
+        "title": "Visiting Student",
+        "titleprimary": "PhD",
+        "primaryAffiliation": "Harvard College",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "https://souro.github.io/images/image.jpg",
+        "website": "https://example.com/sourabrata",
+        "researchInterests": "-"
+      },
+      {
+        "name": "Dr. Joyjeet Paul",
+        "title": "Visiting Scientist",
+        "titleprimary": "Professor",
+        "primaryAffiliation": "University of Michigan",
+        "host": "Prof. Monojit Choudhury",
+        "imageUrl": "https://joyojeet.people.si.umich.edu/wp-content/uploads/2024/12/profile-Joyojeet-Pal.jpg",
+        "website": "https://example.com/joyjeet",
+        "researchInterests": "Social Media, Political Communication"
+      }
+    ],
+    "alumni": [
+      {
+        "name": "Sagnik Mukherjee",
+        "title": "Research Associate",
+        "titleprimary": "PhD",
+        "primaryAffiliation": "UC Berkeley",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "thumbnail.webp",
+        "website": "https://example.com/sagnik",
+        "researchInterests": "-"
+      }
+    ],
+    "collaborators": [
+      {
+        "name": "Harshit Buddhiraja",
+        "title": "Intern",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "thumbnail.webp"
+      },
+      {
+        "name": "Harshit Gupta",
+        "title": "Intern",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "thumbnail.webp"
+      },
+      {
+        "name": "Soumya Teotia",
+        "title": "Intern",
+        "department": "NLP",
+        "primaryAffiliation": "MBZUAI",
+        "supervisor": "Prof. Monojit Choudhury",
+        "imageUrl": "thumbnail.webp"
+      }
+    ]
+  }
+  

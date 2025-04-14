@@ -21,13 +21,14 @@ const projects = [
     },
     {
         projectImage: 'MY_Data.png',
-        projectTitle: 'Musically Yours',
+        projectTitle: 'Missing Melodies',
         sections: [
             {
                 title: 'Research Questions: ', content: [
-                    'How can we optimize AI models for cross-culture music generation?',
-                    'Creating fusion music and discovering new music styles from musicological perspective.',
-                    'Music Video Generation, editing and alignment empower with text based music video editing.'
+                    "What is the representation of different cultures in music generation research space?",
+                    "How can we optimize AI models for cross-culture music generation?",
+                    "How can we better design music oriented evaluation metrics?",
+                    "What correlations can we derive between different music styles and discover new music styles from musicological perspective?"
                 ]
             }
         ]
@@ -61,7 +62,7 @@ const ProjectCarousel = () => {
     };
 
     return (
-        <div style={{ marginTop: '3.5%', width: "-webkit-fill-available" }}>
+        <div style={{ marginTop: '5.5%', width: "-webkit-fill-available" }}>
             <Slider {...settings}>
                 {projects.map((project) => (
                     <div style={styles.pageContainer}>
@@ -151,7 +152,8 @@ const styles = {
     detailsContainer: {
         flexDirection: "column",
         display: "flex",
-        padding: "5%"
+        padding: "5%",
+        minWidth: "100%"
     },
     imageContainer: {
         width: '100%',
@@ -170,11 +172,11 @@ const styles = {
         fontSize: '0.6em',
         color: '#555', // Makes the caption text slightly muted
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: '200'
     },
     title: {
         fontSize: '24px',
-        fontWeight: 'bold',
+        fontWeight: '200',
         margin: '20px 0',
         textAlign: 'center',
     },
@@ -186,23 +188,27 @@ const styles = {
     section: {
         width: '100%',
         marginBottom: '20px',
+        textAlign: "left",
     },
     sectionTitle: {
         fontSize: '20px',
-        fontWeight: 'bold',
+        fontWeight: '200',
         color: '#333',
     },
     sectionContent: {
         fontSize: '16px',
         lineHeight: '1.6',
         color: '#555',
+        fontWeight: '200',
     },
 
     sectionContentList: {
         paddingLeft: '10px', // Adds padding for list indentation
+        fontWeight: '200',
     },
     sectionContentItem: {
         marginBottom: '2px', // Adds spacing between list items
+        fontWeight: '200',
     },
 };
 

@@ -41,7 +41,7 @@ const JoinUs = (props) => {
 
                 <section className="apply-now">
                     <h2>How to Apply</h2>
-                    <p>Please send your resume and a cover letter detailing your interest and experience to <a href="mailto:labemail@example.com">labemail@example.com</a>. Include the position you're applying for in the subject line.</p>
+                    <p>Please send your resume and a cover letter detailing your interest and experience to <a href="mailto:monojit.choudhury@mbzuai.ac.ae">monojit.choudhury@mbzuai.ac.ae</a>. Include the position you're applying for in the subject line.</p>
                     <p>We look forward to welcoming you to our team!</p>
                 </section>
             </div>

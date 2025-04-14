@@ -82,7 +82,7 @@ export default function AppAppBar() {
             <Box sx={{display:"flex", alignItems:"center"}}>
               <Box
                 component="img"
-                src="logo.svg" // Replace with your image path
+                src="/logo.svg" // Replace with your image path
                 alt="Mission"
                 sx={{
                   width: { xs: "30%", md: "30%" },
@@ -104,7 +104,7 @@ export default function AppAppBar() {
                 }}
                 onClick={() => navigate("/")}
               >
-                SAMA
+                QuBIC
               </Typography>
             </Box>
 
@@ -172,8 +172,8 @@ export default function AppAppBar() {
                 >
                   <MenuItem onClick={() => navigate("/project/cy")}>Culturally Yours</MenuItem>
                   <MenuItem onClick={() => navigate("/project/mm")}>Missing Melodies</MenuItem>
-                  <MenuItem onClick={() => navigate("/project/ey")}>Moral Machines</MenuItem>
-                  <MenuItem onClick={() => navigate("/project/sc")}>Culture Constructs</MenuItem>
+                  {/* <MenuItem onClick={() => navigate("/project/ey")}>Moral Machines</MenuItem>
+                  <MenuItem onClick={() => navigate("/project/sc")}>Culture Constructs</MenuItem> */}
                 </Menu>
                 </>
 

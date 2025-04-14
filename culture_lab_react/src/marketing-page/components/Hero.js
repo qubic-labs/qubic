@@ -1,52 +1,18 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import InputLabel from "@mui/material/InputLabel";
-import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-
-import { visuallyHidden } from "@mui/utils";
-import { styled } from "@mui/material/styles";
-import { Divider } from "@mui/material";
 import Testimonials from "./Testimonials";
 import ProjectCarousel from "./Carousel";
-import {useState, useEffect} from "react";
+import Cube3D from "./Cube";
 
 const metaValues = ["Meta-Linguistic", "Meta-Valued", "Meta-Cultural", "Meta-Social"];
 
-const StyledBox = styled("div")(({ theme }) => ({
-  alignSelf: "center",
-  width: "100%",
-  height: 500,
-  marginTop: theme.spacing(8),
-  borderRadius: (theme.vars || theme).shape.borderRadius,
-  outline: "6px solid",
-  outlineColor: "hsla(220, 25%, 80%, 0.2)",
-  border: "1px solid",
-  borderColor: (theme.vars || theme).palette.grey[200],
-  boxShadow: "0 0 12px 8px hsla(220, 25%, 80%, 0.2)",
-  backgroundImage: `url("../../bg.jpg")`,
-  backgroundSize: "cover",
-  [theme.breakpoints.up("sm")]: {
-    marginTop: theme.spacing(10),
-    height: 700,
-  },
-  ...theme.applyStyles("dark", {
-    boxShadow: "0 0 24px 12px hsla(210, 100%, 25%, 0.2)",
-    backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || "https://mui.com"
-      }/static/screenshots/material-ui/getting-started/templates/dashboard-dark.jpg)`,
-    outlineColor: "hsla(220, 20%, 42%, 0.1)",
-    borderColor: (theme.vars || theme).palette.grey[700],
-  }),
-}));
-
 export default function Hero() {
-  const [metaText, setMetaText] = useState(metaValues[0]);
+  const [metaText, setMetaText] = React.useState(metaValues[0]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => {
       setMetaText(metaValues[Math.floor(Math.random() * metaValues.length)]);
     }, 3000); // Changes text every 3 seconds
@@ -63,9 +29,7 @@ export default function Hero() {
           height: "100%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundImage: `url("${process.env.PUBLIC_URL}/bg.jpg")`,
-          backgroundColor: "rgb(0,0,0,0.5)",
-
+          backgroundColor: "#065171",
           ...theme.applyStyles("dark", {
             filter: "invert(1)",
             backgroundImage: `url("${process.env.PUBLIC_URL}/bg.jpg")`,
@@ -77,30 +41,20 @@ export default function Hero() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            pt: { xs: 5, sm: 10 },
-            pb: { xs: 15, sm: 25 },
-
+            pt: { xs: 3, sm: 8 },
+            pb: { xs: 4, sm: 8 },
             ...theme.applyStyles("dark", {
               filter: "invert",
+              maxHeight: "500px",
             }),
           })}
         >
           <Stack
             spacing={2}
             useFlexGap
-            sx={{ alignItems: "center", width: { xs: "100%", sm: "70%" } }}
+            sx={{ alignItems: "center", width: { xs: "100%", sm: "80%" } }}
           >
-            <Box
-              component="img"
-              src="logo_span.svg" // Replace with your image path
-              alt="Mission"
-              sx={{
-                width: { xs: "100%", md: "40%" },
-                maxWidth: "50%",
-                borderRadius: 2, // Optional styling for image
-                display: "block",
-              }}
-            />
+            <Cube3D />
             <Typography
               variant="h1"
               sx={(theme) => ({
@@ -109,13 +63,13 @@ export default function Hero() {
                 alignItems: "center",
                 fontSize: "clamp(6rem, 14vw, 6.5rem)",
                 textAlign: "center",
-
+                marginTop: "5%",
                 ...theme.applyStyles("dark", {
                   color: "white",
                 }),
               })}
             >
-              SAMA
+              QuBIC
             </Typography>
             <Typography
               sx={{
@@ -126,73 +80,24 @@ export default function Hero() {
                 width: { sm: "100%", md: "80%" },
               }}
             >
-              Socially-Aware {metaText} AI
-            </Typography>
-            <Typography
-              sx={{
-                textAlign: "center",
-                color: "white",
-                fontWeight: "300",
-                fontSize: "30px",
-                width: { sm: "100%", md: "80%" },
-              }}
-            >
-              Advancing AI for a More Inclusive World
+              Quantifying Behavior, Intelligence, and Culture
             </Typography>
           </Stack>
         </Container>
       </Box>
+
       <Box paddingTop={3} paddingBottom={8}>
-        <Stack
-          spacing={2}
-          useFlexGap
-          sx={{
-            alignItems: "center",
-            width: { xs: "100%", sm: "100%" },
-            paddingTop: "3%",
-            paddingBottom: "3%",
-          }}
-        >
-          <Typography
-            variant="h1"
-            sx={(theme) => ({
-              display: "flex",
-              color: "black",
-              flexDirection: { xs: "column", sm: "row" },
-              alignItems: "center",
-              fontSize: "clamp(3rem, 10vw, 3.5rem)",
-
-              ...theme.applyStyles("dark", {
-                color: "primary.light",
-              }),
-            })}
-          >
-            Overview
-          </Typography>
-          <Typography
-            sx={{
-              textAlign: "center",
-              color: "black",
-              fontWeight: "300",
-              fontSize: "35px",
-              width: { sm: "100%", md: "80%" },
-            }}
-          >
-            "Curiouser and curiouser"
-          </Typography>
-        </Stack>
-        <Divider />
-
         <Stack
           direction={{ xs: "column", md: "row" }} // Stack items in a column on small screens and row on larger screens
           spacing={2}
           useFlexGap
           sx={{
-            alignItems: "flex-start",
+            alignItems: "stretch", // Ensure that the sections take equal height
             width: "100%",
             paddingTop: "3%",
             paddingBottom: "6%",
-            paddingX: "3%"
+            paddingX: "3%",
+            height: "100%", // Make sure the stack is taking full available height
           }}
         >
           <Stack
@@ -201,11 +106,14 @@ export default function Hero() {
               width: { xs: "100%", md: "50%" },
               textAlign: { xs: "center", md: "left" },
               marginTop: { xs: "1%" },
-              marginRight: "5%"
+              marginRight: "5%",
+              height: "100%", // Ensure this stack takes full height
+              flex: 1, // This makes the project section take equal height
             }}
           >
             <Typography
               variant="h1"
+              fontWeight="500"
               sx={(theme) => ({
                 color: "black",
                 fontSize: "clamp(2rem, 7vw, 2.5rem)",
@@ -223,8 +131,15 @@ export default function Hero() {
             <ProjectCarousel />
           </Stack>
 
-
-          <Testimonials />
+          <Stack
+            sx={{
+              width: { xs: "100%", md: "50%" },
+              height: "100%", // Ensure this stack takes full height
+              flex: 1, // This ensures equal height
+            }}
+          >
+            <Testimonials />
+          </Stack>
         </Stack>
       </Box>
     </Box>

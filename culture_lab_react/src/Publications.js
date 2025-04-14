@@ -4,6 +4,7 @@ import AppTheme from "./shared-theme/AppTheme";
 import PublicationDetails from "./marketing-page/components/publicationDetails";
 import Footer from "./marketing-page/components/Footer";
 import Divider from "@mui/material/Divider";
+import {MdSchool} from "react-icons/md";
 
 
 export default function Publication(props) {
@@ -14,14 +15,11 @@ export default function Publication(props) {
         <Box
           id="hero"
           sx={(theme) => ({
-            backgroundSize: "cover",
             backgroundPosition: "center",
             height: "100vh",
             minHeight: "400px" /* Adjust to preferred height */,
             width: "100%",
             height: "100%",
-            backgroundSize: "cover",
-            backgroundImage: `url("${process.env.PUBLIC_URL}/publication.jpg")`,
             backgroundColor: "rgb(0,0,0,0.5)",
 
             ...theme.applyStyles("dark", {
@@ -35,9 +33,10 @@ export default function Publication(props) {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              minWidth: "100%",
               pt: { xs: 5, sm: 10 },
               pb: { xs: 15, sm: 25 },
-
+              background: "#065171",
               ...theme.applyStyles("dark", {
                 filter: "invert",
               }),
@@ -46,7 +45,7 @@ export default function Publication(props) {
             <Stack
               spacing={2}
               useFlexGap
-              sx={{ alignItems: "center", width: { xs: "100%", sm: "70%" } }}
+              sx={{ alignItems: "center", width: { xs: "100%", sm: "100%" } }}
             >
               <Typography
                 variant="h1"
@@ -63,6 +62,7 @@ export default function Publication(props) {
                 })}
               >
                 Publications
+                <MdSchool size={50} style={{marginBottom: "5%"}}/>
               </Typography>
             </Stack>
           </Container>

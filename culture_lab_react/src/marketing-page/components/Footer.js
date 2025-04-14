@@ -15,7 +15,7 @@ import SitemarkIcon from "./SitemarkIcon";
 
 function Copyright() {
   return (
-    <Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
+    <Typography variant="body2" sx={{ color: "text.secondary", mt: 1, textAlign: "left" }}>
       {"Copyright © "}
       <Link color="text.secondary" href="https://mui.com/">
         Sitemark
@@ -53,7 +53,7 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
+          <Typography variant="body2" sx={{ fontWeight: 'bold', textAlign:"left" }}>
             About Us
           </Typography>
           <Link color="text.secondary" variant="body2" href="https://mbzuai.ac.ae/">
@@ -63,13 +63,7 @@ export default function Footer() {
             Research @MBZUAI
           </Link>
           <Link color="text.secondary" variant="body2" href="#">
-            Highlights
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            Pricing
-          </Link>
-          <Link color="text.secondary" variant="body2" href="#">
-            FAQs
+            About the name
           </Link>
         </Box>
         {/* <Box

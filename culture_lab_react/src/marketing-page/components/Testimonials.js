@@ -6,52 +6,50 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/system";
 import { Link } from "@mui/material";
 
 const userTestimonials = [
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
-    name: "Cindy Baker",
-    occupation: "CTO",
     testimonial:
-      "The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.",
+      "<strong>[March, 2025]</strong>: New blog post published on <a href='https://mbzuai.ac.ae/news/culturally-yours-a-new-tool-for-understanding-cultural-references-in-text/' target='_blank' rel='noopener noreferrer'>Culturally Yours: A new tool for understanding cultural references in text</a>.",
   },
   {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
-    name: "Julia Stewart",
-    occupation: "Senior Engineer",
     testimonial:
-      "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
+      "<strong>[February, 2025]</strong>: Pre-print of our NAACL paper <a href='https://arxiv.org/abs/2502.09636' target='_blank' rel='noopener noreferrer'>Reading between the Lines: Can LLMs Help Bridge Cross-Cultural Communication Gaps?</a> is now available.",
   },
   {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
-    name: "John Smith",
-    occupation: "Product Designer",
     testimonial:
-      "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
+      "<strong>[February, 2025]</strong>: Pre-print of our NAACL paper <a href='https://arxiv.org/abs/2502.09637' target='_blank' rel='noopener noreferrer'>Meta-Cultural Competence: Climbing the Right Hill of Cultural Awareness</a> is now available.",
   },
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: "Daniel Wolf",
-    occupation: "CDO",
     testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+      "<strong>[February, 2025]</strong>: Pre-print of our NAACL paper <a href='https://arxiv.org/abs/2502.07101' target='_blank' rel='noopener noreferrer'>SMAB: MAB based word Sensitivity Estimation Framework and its Applications in Adversarial Text Generation</a> is now available.",
   },
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: "Daniel Wolf",
-    occupation: "CDO",
     testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+      "<strong>[February, 2025]</strong>: Pre-print of our NAACL paper <a href='https://arxiv.org/abs/2502.07328' target='_blank' rel='noopener noreferrer'>Music for All: Exploring Multicultural Representations in Music Generation Models.",
   },
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: "Daniel Wolf",
-    occupation: "CDO",
     testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+      "<strong>[January, 2025]</strong>: Four papers from the lab accepted at <a href='https://2025.naacl.org/' target='_blank' rel='noopener noreferrer'>NAACL 2025</a>!!",
+  },
+  {
+    testimonial:
+      "<strong>[November, 2024]</strong>: Our paper <a href='https://aclanthology.org/2025.coling-demos.21/' target='_blank' rel='noopener noreferrer'>CULTURALLY YOURS</a> accepted at COLING Demos 2025.",
+  },
+  {
+    testimonial:
+      "<strong>[November, 2024]</strong>: New blog post published on <a href='https://mbzuai.ac.ae/news/culture-and-bias-in-llms-defining-the-challenge-and-mitigating-risks/' target='_blank' rel='noopener noreferrer'> Culture and bias in LLMs: Defining the challenge and mitigating risks.",
+  },
+  {
+    testimonial:
+      "<strong>[November, 2024]</strong>: Our paper <a href='https://aclanthology.org/2024.emnlp-main.983/' target='_blank' rel='noopener noreferrer'>The Zeno’s Paradox of ‘Low-Resource’ Languages</a> wins Outstanding Paper Award at EMNLP 2024.",
+  },
+  {
+    testimonial:
+      "<strong>[November, 2024]</strong>: Our paper <a href='https://arxiv.org/abs/2412.04100' target='_blank' rel='noopener noreferrer'>Missing Melodies: AI Music Generation and its \"Nearly\" Complete Omission of the Global South is now available on Arxiv.",
   }
 ];
 
@@ -102,67 +100,82 @@ export default function Testimonials() {
         }}
       >
         <Typography
-          component="h1"
-          variant="h1"
+          fontWeight="500"
+          fontSize={{ sm: "2rem", md: "2rem", xs: "2rem" }}
+          color="black"
           gutterBottom
-          sx={{ color: "text.primary",  fontSize: "clamp(2rem, 7vw, 2.5rem)"}}
         >
           Recent Releases & News
         </Typography>
-        {/* <Typography variant="body1" sx={{ color: "text.secondary" }}>
-          See what our customers love about our products. Discover how we excel
-          in efficiency, durability, and satisfaction. Join us for quality,
-          innovation, and reliable support.
-        </Typography> */}
       </Box>
-      <Grid container spacing={2}>
-        {userTestimonials.map((testimonial, index) => (
-          <Grid
-            size={{ xs: 12, sm: 6, md: 4 }}
-            key={index}
-            sx={{ display: "flex" }}
-          >
-            <Card
-              variant="outlined"
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                flexGrow: 1,
-              }}
+      <Box
+        sx={{
+          width: "100%",
+          maxHeight: "700px",
+          overflowY: "auto",
+          // flexDirection: "column",
+          // gap: "100px"
+        }}
+      >
+        <Grid container spacing={2}>
+          {userTestimonials.map((testimonial, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={6}
+              key={index}
+              sx={{ display: "flex", maxHeight: "150px"}}
             >
-              <CardContent>
-                <Typography
-                  variant="body1"
-                  gutterBottom
-                  sx={{ color: "text.secondary" }}
-                >
-                  {testimonial.testimonial}
-                </Typography>
-              </CardContent>
-              <Box
+              <Card
+                variant="outlined"
                 sx={{
                   display: "flex",
-                  flexDirection: "row",
+                  flexDirection: "column",
                   justifyContent: "space-between",
+                  flexGrow: 1,
+                  backgroundColor: "#e3f2fd",
+                  maxWidth: "97%",
+                  maxHeight: "100%",
                 }}
               >
-                <CardHeader
-                  title={
-                    <Typography variant="h6" component="div">
-                      <Link
-                        href="/read-more"
-                        underline="hover"
-                        style={{ marginLeft: '8px' }}
-                      >
-                        Read More
-                      </Link>
-                    </Typography>} />
-              </Box>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+                <CardContent>
+                  <Typography
+                    variant="body1"
+                    gutterBottom
+                    sx={{ color: "text.secondary" }}
+                    component="div"
+                    dangerouslySetInnerHTML={{
+                      __html: testimonial.testimonial,
+                    }}
+                  />
+                </CardContent>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <CardHeader
+                    title={
+                      <Typography variant="h6" component="div" fontWeight="200">
+                        <Link
+                          href="/read-more"
+                          underline="hover"
+                          style={{ marginLeft: "8px", fontWeight: "200" }}
+                        >
+                          {/* Read More */}
+                        </Link>
+                      </Typography>
+                    }
+                  />
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Container>
   );
 }

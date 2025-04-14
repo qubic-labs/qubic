@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
 
 const userTestimonials = [
@@ -108,9 +108,9 @@ export default function Testimonials() {
           Testimonials
         </Typography>
       </Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justifyContent="center">
         {userTestimonials.map((testimonial, index) => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index} sx={{ display: 'flex' }}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               variant="outlined"
               sx={{
@@ -134,6 +134,7 @@ export default function Testimonials() {
                   display: 'flex',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
+                  alignItems: 'center',
                 }}
               >
                 <CardHeader

@@ -4,6 +4,7 @@ import AppTheme from "./shared-theme/AppTheme";
 import { Typography, Box, Stack, Container } from "@mui/material";
 import Footer from "./marketing-page/components/Footer";
 import Divider from "@mui/material/Divider";
+import {MdEmojiPeople} from "react-icons/md";
 
 export default function People(props) {
     return (
@@ -16,8 +17,8 @@ export default function People(props) {
                     height: "100%",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    backgroundImage: `url("${process.env.PUBLIC_URL}/people.jpg")`,
-                    backgroundColor: "rgb(0,0,0,0.5)",
+                    // backgroundImage: `url("${process.env.PUBLIC_URL}/people.jpg")`,
+                    backgroundColor: "#065171",
 
                     ...theme.applyStyles("dark", {
                         filter: "invert(1)",
@@ -58,6 +59,7 @@ export default function People(props) {
                             })}
                         >
                             People
+                            <MdEmojiPeople size={50} style={{marginBottom: "10%"}}/>
                         </Typography>
                     </Stack>
                 </Container>

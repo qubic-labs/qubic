@@ -1,279 +1,42 @@
-import React from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, Grid, Box, Divider } from '@mui/material';
-import { Link, Email, Phone } from '@mui/icons-material';
+import { Grid, Card, CardContent, CardMedia, Typography, Box, Divider } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
+import peopleData from './peopleData.json';
 
-const faculty = [
-  {
-    name: 'Prof. Monojit Choudhury',
-    title: 'Principal Investigator',
-    designation: 'Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2024/01/monojit-choudhury-487px.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/monojit-choudhury/',
-  },
-  {
-    name: 'Prof. Alham Fikri Aji',
-    title: 'Assistant Professor, NLP, MBZUAI',
-    designation: 'Assistant Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2024/03/Alham-Fikri-Aji-487px2024.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/alham-fikri-aji/',
-  },
-  {
-    name: 'Prof. Thamar Solorio',
-    title: 'Professor, NLP, MBZUAI',
-    designation: 'Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2023/10/Thamar-487px.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/thamar-solorio/',
-  },
-  {
-    name: 'Prof. Elizabeth Churchill',
-    title: 'Department Chair, HCI, MBZUAI',
-    designation: 'Professor',
-    department: 'HCI',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2024/05/ElizabethChurchill-487px.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/elizabeth-churchill/',
-  },
-  {
-    name: 'Prof. Fajri Koto',
-    title: 'Assistant Professor, NLP, MBZUAI',
-    designation: 'Assistant Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2024/07/Untitled-design-11.png',
-    website: 'https://mbzuai.ac.ae/study/faculty/fajri-koto/',
-  },
-  {
-    name: 'Prof. Mohammed Abdul Mageed',
-    title: 'Associate Professor, NLP, MBZUAI',
-    designation: 'Associate Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2023/08/Muhammad-Abdul-Mageed-487px-1.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/muhammad-abdul-mageed/',
-  },
-  {
-    name: 'Prof. Yova Kementchedjhieva',
-    title: 'Assistant Professor, NLP, MBZUAI',
-    designation: 'Assistant Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2023/10/Yova-Kementchedijhieva-487px.png',
-    website: 'https://mbzuai.ac.ae/study/faculty/yova-kementchedjhieva/',
-  },
-  {
-    name: 'Prof. Gus (Guangyu) Xia',
-    title: 'Assistant Professor, ML, MBZUAI',
-    designation: 'Assistant Professor',
-    department: 'ML',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2022/06/profile_gus-xia_secondary.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/dr-gus-xia/',
-  },
-  {
-    name: 'Prof. Kentaro Inui',
-    title: 'Professor, NLP, MBZUAI',
-    designation: 'Professor',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://mbzuai.ac.ae/wp-content/uploads/2023/10/Kentaro-Inui-487px.jpg',
-    website: 'https://mbzuai.ac.ae/study/faculty/kentaro-inui/',
-  },
-  {
-    name: 'Prof. Salman Khan',
-    title: 'Associate Professor, CV, MBZUAI',
-    designation: 'Associate Professor',
-    department: 'CV',
-    primaryAffiliation: 'MBZUAI',
-    researchArea: ' ',
-    imageUrl: 'https://salman-h-khan.github.io/images/salman.png',
-    website: 'https://mbzuai.ac.ae/study/faculty/salman-khan/',
-  },
-  // Add more members as needed
-];
-
-const postdocs = [
-  {
-    name: 'Sougata Saha',
-    title: 'Postdoc',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-];
-
-const students = [
-  {
-    name: 'Mukund Choudhary',
-    title: 'PhD',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Utkarsh Agarwal',
-    title: 'PhD',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Amirbek Djanibekov',
-    title: 'PhD',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Atharva Kulkarni',
-    title: 'MSc',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-];
-
-const researchers = [
-  {
-    name: 'Arif Ahmad',
-    title: 'Researcher',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Atharva Mehta',
-    title: 'Researcher',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Farid Adilazuarda',
-    title: 'Researcher',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Alham Fikri Aji',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Saurabh Pandey',
-    title: 'Researcher',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Shivam Chauhan',
-    title: 'Researcher',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-];
-
-const visiting_students_and_scientists = [
-  {
-    name: 'Hellina Hailu Nigatu',
-    title: 'Visiting Researcher',
-    titleprimary: 'PhD',
-    primaryAffiliation: 'UC Berkeley',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Sourabrata Mukherjee',
-    title: 'Visiting Researcher',
-    titleprimary: 'PhD',
-    primaryAffiliation: 'Charles University',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Dr. Joyjeet Paul',
-    title: 'Visiting Scientist',
-    titleprimary: 'Professor',
-    primaryAffiliation: 'University of Michigan',
-    host: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-];
-
-const collaborators = [
-  {
-    name: 'Harshit Buddhiraja',
-    title: 'Intern',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Harshit Gupta',
-    title: 'Intern',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-  {
-    name: 'Soumya Teotia',
-    title: 'Intern',
-    department: 'NLP',
-    primaryAffiliation: 'MBZUAI',
-    supervisor: 'Prof. Monojit Choudhury',
-    imageUrl: 'thumbnail.webp',
-  },
-];
+const { pi, postdocs, students, researchers, visiting_students_and_scientists, alumni } = peopleData;
 
 const LabTeam = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const handleNameClick = (category, id) => {
+    // navigate(`/individual/${category}/${id}`); // Navigate to the profile page of the clicked member
+    return
+  };
+
   return (
-    <Grid container spacing={2} style={{ marginTop: '2%', paddingLeft: '2%' }}>
-      <Grid container spacing={2} style={{ marginLeft: '2%' }}><h1>Faculty</h1></Grid>
-      {faculty.map((member, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
-          <Card
-            sx={{
-              maxWidth: 300,
-              boxShadow: 3,
-              transition: 'transform 0.2s',
-              '&:hover': { transform: 'scale(1.05)' },
-            }}
-          >
+    <Grid container spacing={2} style={{ marginTop: '2%', paddingLeft: '3%' }}>
+      {/* PI Section */}
+      <Grid container spacing={2} style={{ marginLeft: '2%' }}><h1>Principal Investigator</h1></Grid>
+      {pi.map((member, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index} style={{ marginLeft: '0.5%' }}>
+          <Card sx={{ maxWidth: 300 }}>
             <CardMedia
               component="img"
-              height="250"
+              sx={{ maxHeight: "300px", objectFit: "contain", minHeight: "300px" }}
               image={member.imageUrl}
               alt={member.name}
             />
             <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
+              {/* Name as clickable component */}
+              <Typography
+                color='black'
+                gutterBottom
+                variant="h6"
+                component="div"
+                style={{ marginTop: "5%", cursor: "pointer" }}
+                onClick={() => handleNameClick("pi", member.name)} // onClick event handler for name
+              >
                 {member.name}
               </Typography>
-
               {member.title && (
                 <Typography variant="body2" color="text.secondary">
                   {member.title}
@@ -294,210 +57,176 @@ const LabTeam = () => {
                   <b>Primary Affiliation:</b> {member.primaryAffiliation}
                 </Typography>
               )}
-              {member.secondaryAffiliation && (
-                <Typography variant="body2" color="text.secondary">
-                  <b>Secondary Affiliation:</b> {member.secondaryAffiliation}
-                </Typography>
-              )}
-              {member.researchArea && (
-                <Typography variant="body2" color="text.secondary" sx={{ marginTop: '8px' }}>
-                  <b>Research Interests:</b> {member.researchArea}
-                </Typography>
-              )}
-              {member.officeLocation && (
-                <Typography variant="body2" color="text.secondary">
-                  <b>Office:</b> {member.officeLocation}
-                </Typography>
-              )}
-              {member.email && (
-                <Typography variant="body2" color="text.secondary" sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Email fontSize="small" sx={{ mr: 1 }} /> {member.email}
-                </Typography>
-              )}
-              {member.phone && (
-                <Typography variant="body2" color="text.secondary" sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Phone fontSize="small" sx={{ mr: 1 }} /> {member.phone}
-                </Typography>
-              )}
-              {member.website && (
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  startIcon={<Link />}
-                  href={member.website}
-                  target="_blank"
-                  rel="noopener"
-                  sx={{
-                    marginTop: '15px',
-                    textTransform: 'none',
-                    '&:hover': { backgroundColor: 'aliceblue', color: 'black' },
-                  }}
-                >
-                  HomePage
-                </Button>
-              )}
             </CardContent>
           </Card>
         </Grid>
       ))}
+
       <Divider />
+
+      {/* Postdoctoral Researchers Section */}
       <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Postdoctoral Researchers </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
         {postdocs.map((member, index) => (
-          <Grid
-            key={index}
-            sx={{ display: "flex", flexDirection: "column" }}
-            style={{ marginTop: '1%', marginRight: '2%' }}
-          >
+          <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginTop: '1%', marginRight: '2%' }}>
             <Card>
-              <img src={member.imageUrl} style={{maxWidth:"240px" }}></img>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "1%",
-                  textAlign: "center"
-                }}
-              >
-                <Typography fontWeight={600}>{member.name} ({member.title} - {member.department})</Typography>
-                <Typography fontWeight={400}>Supervisor: {member.supervisor}</Typography>
+              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <img
+                  src={member.imageUrl}
+                  style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
+                  alt={member.name}
+                />
               </Box>
-            </ Card>
+              <Box sx={{ display: "flex", flexDirection: "column", marginTop: "2%", textAlign: "center" }}>
+                {/* Name as clickable component */}
+                <Typography
+                  color='black'
+                  marginTop={1}
+                  fontWeight={600}
+                  textAlign={"left"}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => handleNameClick("postdocs", member.name)} // onClick event handler for name
+                >
+                  {member.name}
+                </Typography>
+                {member.department && (
+                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }} textAlign={"left"}>
+                    <b>Department:</b> {member.department}
+                  </Typography>
+                )}
+                {member.researchInterests && (
+                  <Typography variant="body2" color="text.secondary" textAlign={"left"}>
+                    <b>Interests:</b> {member.researchInterests}
+                  </Typography>
+                )}
+              </Box>
+            </Card>
           </Grid>
-
         ))}
       </Grid>
 
       <Divider />
+
+      {/* Graduate Students Section */}
       <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Graduate Students (PhD/MS) </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
         {students.map((member, index) => (
-          <Grid
-            key={index}
-            sx={{ display: "flex", flexDirection: "column" }}
-            style={{ marginTop: '1%', marginRight: '2%' }}
-          >
+          <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginTop: '1%', marginRight: '2%' }}>
             <Card>
-              <img src={member.imageUrl} style={{maxWidth:"240px" }}></img>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "1%",
-                  textAlign: "center"
-                }}
-              >
-                <Typography fontWeight={600}>{member.name} ({member.title} - {member.department})</Typography>
-                <Typography fontWeight={400}>Supervisor: {member.supervisor}</Typography>
-
-                {/* <Typography fontWeight={600}>{member.name}</Typography>
-                <Typography fontWeight={500}>{member.title} - {member.department}</Typography>
-                <Typography fontWeight={200}>{member.primaryAffiliation}</Typography> */}
+              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <img
+                  src={member.imageUrl}
+                  style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
+                  alt={member.name}
+                />
               </Box>
-            </ Card>
-          </Grid>
+              <Box sx={{ display: "flex", flexDirection: "column", marginTop: "2%", textAlign: "center" }}>
+                <Typography
+                  color='black'
+                  fontWeight={600}
+                  textAlign={"left"}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => handleNameClick("students", member.name)} // onClick event handler for name
+                >
+                  {member.name} ({member.title})
+                </Typography>
 
+                <Typography fontWeight={400} textAlign={"left"}>Primary Supervisor: {member.supervisor}</Typography>
+                {member.department && (
+                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }} textAlign={"left"}>
+                    <b>Department:</b> {member.department}
+                  </Typography>
+                )}
+                {member.researchInterests && (
+                  <Typography variant="body2" color="text.secondary" textAlign={"left"}>
+                    <b>Interests:</b> {member.researchInterests}
+                  </Typography>
+                )}
+              </Box>
+            </Card>
+          </Grid>
         ))}
       </Grid>
 
       <Divider />
+
+      {/* Research Associates Section */}
       <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Research Associates </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
         {researchers.map((member, index) => (
-          <Grid
-            key={index}
-            sx={{ display: "flex", flexDirection: "column" }}
-            style={{ marginTop: '1%', marginRight: '2%' }}
-          >
+          <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginTop: '1%', marginRight: '2%' }}>
             <Card>
-              <img src={member.imageUrl} style={{maxWidth:"240px" }}></img>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "1%",
-                  textAlign: "center"
-                }}
-              >
-                <Typography fontWeight={600}>{member.name} ({member.title} - {member.department})</Typography>
-                <Typography fontWeight={400}>Supervisor: {member.supervisor}</Typography>
-
-                {/* <Typography fontWeight={600}>{member.name}</Typography>
-                <Typography fontWeight={500}>{member.title} - {member.department}</Typography>
-                <Typography fontWeight={200}>{member.primaryAffiliation}</Typography> */}
+              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <img
+                  src={member.imageUrl}
+                  style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
+                  alt={member.name}
+                />
               </Box>
-            </ Card>
+              <Box sx={{ display: "flex", flexDirection: "column", marginTop: "2%", textAlign: "center" }}>
+                <Typography
+                  color="black"
+                  fontWeight={600}
+                  textAlign={"left"}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => handleNameClick("researchers", member.name)} // onClick event handler for name
+                >
+                  {member.name}
+                </Typography>
+                {member.department && (
+                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }} textAlign={"left"}>
+                    <b>Department:</b> {member.department}
+                  </Typography>
+                )}
+                {member.researchInterests && (
+                  <Typography variant="body2" color="text.secondary" textAlign={"left"}>
+                    <b>Interests:</b> {member.researchInterests}
+                  </Typography>
+                )}
+              </Box>
+            </Card>
           </Grid>
-
         ))}
       </Grid>
 
       <Divider />
-      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Visiting Researchers </h1></Grid>
+
+      {/* Visiting Students Section */}
+      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Visiting Students </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
         {visiting_students_and_scientists.map((member, index) => (
-          <Grid
-            key={index}
-            sx={{ display: "flex", flexDirection: "column" }}
-            style={{ marginTop: '1%', marginRight: '2%' }}
-          >
+          <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginRight: '2%' }}>
             <Card>
-              <img src={member.imageUrl} style={{maxWidth:"240px" }}></img>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "1%",
-                  textAlign: "center"
-                }}
-              >
-                <Typography fontWeight={600}>{member.name}</Typography>
-                <Typography fontWeight={400}>{member.title}</Typography>
-                <Typography fontWeight={400}>{member.titleprimary} - {member.primaryAffiliation}</Typography>
-                {member.supervisor && <Typography fontWeight={400}>Supervisor: {member.supervisor}</Typography>}
-                {member.host && <Typography fontWeight={400}>Host: {member.host}</Typography>}
-
+              <Box sx={{ display: "flex", flexDirection: "column", marginTop: "2%", textAlign: "center" }}>
+                <Typography fontWeight={600} textAlign={"left"} color='black'>{member.name}</Typography>
+                <Typography fontWeight={400} textAlign={"left"}>{member.title}</Typography>
+                <Typography fontWeight={400} textAlign={"left"}>Primary Affiliation - {member.primaryAffiliation}</Typography>
               </Box>
-            </ Card>
+            </Card>
           </Grid>
-
         ))}
       </Grid>
 
       <Divider />
-      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Collaborators </h1></Grid>
+
+      {/* Alumni Section */}
+      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Alumni </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
-        {collaborators.map((member, index) => (
-          <Grid
-            key={index}
-            sx={{ display: "flex", flexDirection: "column" }}
-            style={{ marginTop: '1%', marginRight: '2%' }}
-          >
+        {alumni.map((member, index) => (
+          <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginRight: '2%' }}>
             <Card>
-              <img src={member.imageUrl} style={{maxWidth:"240px" }}></img>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: "1%",
-                  textAlign: "center"
-                }}
-              >
-                <Typography fontWeight={600}>{member.name}</Typography>
-                <Typography fontWeight={400}>{member.title} - {member.department}</Typography>
-                <Typography fontWeight={400}>Supervisor: {member.supervisor}</Typography>
-
-                {/* <Typography fontWeight={600}>{member.name}</Typography>
-                <Typography fontWeight={500}>{member.title} - {member.department}</Typography>
-                <Typography fontWeight={200}>{member.primaryAffiliation}</Typography> */}
+              <Box sx={{ display: "flex", flexDirection: "column", marginTop: "1%", textAlign: "center" }}>
+                <Typography fontWeight={600} textAlign={"left"} color="black">{member.name}</Typography>
+                <Typography fontWeight={400} textAlign={"left"}>{member.title}</Typography>
+                <Typography fontWeight={400} textAlign={"left"}>Primary Affiliation - {member.primaryAffiliation}</Typography>
               </Box>
-            </ Card>
+            </Card>
           </Grid>
-
         ))}
       </Grid>
 
-    </Grid>
+      <Divider />
+    </Grid >
   );
 };
 
