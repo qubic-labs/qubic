@@ -1,0 +1,87 @@
+/* Main container for the page */
+.joinus-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Section titles */
+  h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  /* Why Join Us section */
+  .why-join ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #666;
+  }
+  
+  .why-join ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  /* Positions section */
+  .positions {
+    margin-top: 20px;
+  }
+  
+  .position {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .position h3 {
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .position p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Apply Now section */
+  .apply-now {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .apply-now p {
+    font-size: 16px;
+  }
+  
+  .apply-now a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .apply-now a:hover {
+    text-decoration: underline;
+  }
+  
