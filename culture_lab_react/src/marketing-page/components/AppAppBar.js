@@ -82,7 +82,7 @@ export default function AppAppBar() {
             <Box sx={{display:"flex", alignItems:"center"}}>
               <Box
                 component="img"
-                src="/logo.svg" // Replace with your image path
+                src="logo.svg" // Replace with your image path
                 alt="Mission"
                 sx={{
                   width: { xs: "30%", md: "30%" },
