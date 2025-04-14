@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from 'react-router-dom';
 import HomePage from "./HomePage";
 import Publication from "./Publications";
 import People from "./People";
