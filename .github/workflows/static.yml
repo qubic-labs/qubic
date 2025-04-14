@@ -1,50 +1,39 @@
 name: Deploy React App to GitHub Pages
- 
+
 on:
   push:
     branches:
-      - main  # or 'master' if that's your default branch
- 
+      - main
+
 jobs:
-
   deploy:
-
     runs-on: ubuntu-latest
- 
+
     permissions:
+      contents: write  # 🔐 Needed to push to GitHub Pages
 
-      contents: write  # This gives `github-actions[bot]` write access to your repository
- 
     steps:
-
-      - name: Checkout code
-
+      - name: 📥 Checkout code
         uses: actions/checkout@v3
- 
-      - name: Set up Node.js
 
+      - name: 🧰 Set up Node.js
         uses: actions/setup-node@v3
-
         with:
-
           node-version: '18'
- 
-      - name: Install dependencies
 
+      - name: 🗃️ Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('client/package-lock.json') }}
+
+      - name: 📦 Install dependencies
         run: npm install
+        working-directory: ./client
 
-        working-directory: ./culture_lab_react
- 
-      - name: Deploy to GitHub Pages
-
+      - name: 🚀 Deploy to GitHub Pages
         run: npm run deploy
-
-        working-directory: ./culture_lab_react
-
+        working-directory: ./client
         env:
-
-          CI: false
-
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
- 
+          CI: false  # disables strict mode so warnings like `no-unused-vars` won't fail the build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # this gives the deploy command push access
