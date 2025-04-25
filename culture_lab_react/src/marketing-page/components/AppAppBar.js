@@ -148,7 +148,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
               >
                 People
               </Button>
-              
+
               <>
               <Button
                 variant="text"
