@@ -17,18 +17,21 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { Menu } from '@mui/material';
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+const StyledToolbar = styled(Toolbar, {
+  shouldForwardProp: (prop) => prop !== 'bgColor',
+})(({ theme, bgColor }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   flexShrink: 0,
-  backgroundColor: theme.vars
-    ? "#065171"
-    : alpha(theme.palette.background.default),
+  backgroundColor: bgColor || (theme.vars
+    ? "#0b3041"
+    : alpha(theme.palette.background.default)),
   padding: "8px 12px",
 }));
 
-export default function AppAppBar() {
+
+export default function AppAppBar({ bgColor = "#0b3041" }) {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -63,13 +66,13 @@ export default function AppAppBar() {
       enableColorOnDark
       sx={{
         boxShadow: 0,
-        backgroundColor: "#065171",
+        backgroundColor: bgColor,
         // backgroundImage: `url("${process.env.PUBLIC_URL}/bg.webp")`,
         alignItems: "end",
       }}
     >
       <Container maxWidth="lg" style={{ alignItems: "center", zIndex: "1" }}>
-        <StyledToolbar variant="dense" disableGutters>
+        <StyledToolbar variant="dense" disableGutters bgColor={bgColor}>
           <Box
             sx={{
               flexGrow: 1,

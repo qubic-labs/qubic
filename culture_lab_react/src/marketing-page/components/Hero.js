@@ -29,10 +29,11 @@ export default function Hero() {
           height: "100%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundColor: "#065171",
+          backgroundImage: `url("${process.env.PUBLIC_URL}/bg1.png")`,
+          // backgroundColor: "#065171",
           ...theme.applyStyles("dark", {
             filter: "invert(1)",
-            backgroundImage: `url("${process.env.PUBLIC_URL}/bg.jpg")`,
+            backgroundImage: `url("${process.env.PUBLIC_URL}/bg1.png")`,
           }),
         })}
       >

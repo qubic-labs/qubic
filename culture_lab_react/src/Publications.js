@@ -10,7 +10,7 @@ import {MdSchool} from "react-icons/md";
 export default function Publication(props) {
   return (
     <AppTheme {...props}>
-      <AppAppBar />
+      <AppAppBar {props.bgColor}/>
       <Box>
         <Box
           id="hero"

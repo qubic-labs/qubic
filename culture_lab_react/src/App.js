@@ -14,8 +14,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/publication" element={<Publication />} />
+        <Route path="/" element={<HomePage bgColor={"#0b3041"}/>} />
+        <Route path="/publication" element={<Publication bgColor={""}/>} />
         {/* Dynamic route for People page */}
         <Route path="/people" element={<People />} />
         <Route path="/individual/:category/:id" element={<Individual />} />
