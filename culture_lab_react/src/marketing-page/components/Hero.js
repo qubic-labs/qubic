@@ -47,8 +47,6 @@ export default function Hero() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            pt: { xs: 1, sm: 7 },
-            pb: { xs: 2, sm: 7 },
             ...theme.applyStyles("dark", {
               filter: "invert",
               maxHeight: "500px",
@@ -58,9 +56,22 @@ export default function Hero() {
           <Stack
             spacing={2}
             useFlexGap
-            sx={{ alignItems: "center", width: { xs: "100%", sm: "80%" } }}
+            sx={{
+              alignItems: "center",
+              width: { xs: "100%", sm: "80%" },
+              paddingBottom: "3%",
+            }}
           >
-            <div style={{display: "flex", alignItems: "center", justifyContent: "space-evenly", minWidth: "100%", padding:"5%", marginLeft: "19%"}}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-evenly",
+                minWidth: "100%",
+                padding: "5%",
+                marginLeft: "10%",
+              }}
+            >
               <Cube3D />
               <Typography
                 variant="h1"
@@ -72,6 +83,7 @@ export default function Hero() {
                   textAlign: "center",
                   marginTop: "1%",
                   marginRight: "20%",
+                  marginLeft: "2%",
                   ...theme.applyStyles("dark", {
                     color: "white",
                   }),
