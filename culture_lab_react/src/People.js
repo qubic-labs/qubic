@@ -9,7 +9,7 @@ import {MdEmojiPeople} from "react-icons/md";
 export default function People(props) {
     return (
         <AppTheme {...props}>
-            <AppAppBar />
+            <AppAppBar bgColor={props.bgColor}/>
             <Box
                 id="hero"
                 sx={(theme) => ({
@@ -18,11 +18,10 @@ export default function People(props) {
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     // backgroundImage: `url("${process.env.PUBLIC_URL}/people.jpg")`,
-                    backgroundColor: "#065171",
+                    backgroundImage: `url("${process.env.PUBLIC_URL}/bg1.png")`,
 
                     ...theme.applyStyles("dark", {
                         filter: "invert(1)",
-                        backgroundImage: `url("${process.env.PUBLIC_URL}/people.jpg")`,
                     }),
                 })}
             >
@@ -32,7 +31,7 @@ export default function People(props) {
                         flexDirection: "column",
                         alignItems: "center",
                         pt: { xs: 5, sm: 10 },
-                        pb: { xs: 15, sm: 25 },
+                        pb: { xs: 5, sm: 10 },
 
                         ...theme.applyStyles("dark", {
                             filter: "invert",

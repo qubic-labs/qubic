@@ -17,7 +17,7 @@ export default function HomePage(props) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
-      <AppAppBar />
+      <AppAppBar bgColor={props.bgColor}/>
       <Hero />
       <div>
         {/* <LogoCollection /> */}

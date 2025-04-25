@@ -17,17 +17,16 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { Menu } from '@mui/material';
 
+// styled definition
 const StyledToolbar = styled(Toolbar, {
   shouldForwardProp: (prop) => prop !== 'bgColor',
-})(({ theme, bgColor }) => ({
+})(({ bgColor }) => ({
+  backgroundColor: bgColor ?? "#0b3041",
+  padding: "8px 12px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   flexShrink: 0,
-  backgroundColor: bgColor || (theme.vars
-    ? "#0b3041"
-    : alpha(theme.palette.background.default)),
-  padding: "8px 12px",
 }));
 
 

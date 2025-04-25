@@ -14,19 +14,16 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Sitemark from "./SitemarkIcon";
 import ColorModeIconDropdown from "../../shared-theme/ColorModeIconDropdown";
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+const StyledToolbar = styled(Toolbar, {
+  shouldForwardProp: (prop) => prop !== 'bgColor',
+})(({ theme, bgColor }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   flexShrink: 0,
-  borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backdropFilter: "blur(24px)",
-  border: "1px solid",
-  borderColor: (theme.vars || theme).palette.divider,
-  backgroundColor: theme.vars
-    ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
-    : alpha(theme.palette.background.default, 0.4),
-  boxShadow: (theme.vars || theme).shadows[1],
+  backgroundColor: bgColor || (theme.vars
+    ? "#0b3041"
+    : alpha(theme.palette.background.default)),
   padding: "8px 12px",
 }));
 

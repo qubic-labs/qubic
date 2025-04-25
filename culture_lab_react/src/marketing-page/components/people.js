@@ -192,7 +192,7 @@ const LabTeam = () => {
       <Divider />
 
       {/* Visiting Students Section */}
-      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Visiting Students </h1></Grid>
+      <Grid container spacing={2} style={{ marginLeft: '2%', marginTop: '1%' }}><h1> Visiting Scholars </h1></Grid>
       <Grid container spacing={5} style={{ marginLeft: '2%', marginTop: '1%' }}>
         {visiting_students_and_scientists.map((member, index) => (
           <Grid key={index} sx={{ display: "flex", flexDirection: "column" }} style={{ marginRight: '2%' }}>

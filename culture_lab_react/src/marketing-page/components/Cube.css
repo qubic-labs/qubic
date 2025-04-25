@@ -2,7 +2,6 @@
     perspective: 1000px;
     width: 120px;
     height: 120px;
-    margin: 20px auto;
   }
   
   .cube {
@@ -29,10 +28,10 @@
     padding: 10%;
   }
   
-  .front  { transform: rotateY(  0deg) translateZ(60px); background: hsl(210, 100%, 80%); }
-  .back   { transform: rotateY(180deg) translateZ(60px); background: #065171; color: #ffffff;}
+    .front  { transform: rotateY(  0deg) translateZ(60px); background: #385c6c; color: #ffffff;}
+  .back   { transform: rotateY(180deg) translateZ(60px); background: #4b7d8e; color: #ffffff;}
   .right  { transform: rotateY( 90deg) translateZ(60px); }
-  .left   { transform: rotateY(-90deg) translateZ(60px); background: hsl(210, 100%, 80%);}
-  .top    { transform: rotateX( 90deg) translateZ(60px); background: #065171; color: #ffffff;}
+  .left   { transform: rotateY(-90deg) translateZ(60px); background: #385c6c; color: #ffffff}
+  .top    { transform: rotateX( 90deg) translateZ(60px); background: #4b7d8e; color: #ffffff;}
   .bottom { transform: rotateX(-90deg) translateZ(60px); }
   

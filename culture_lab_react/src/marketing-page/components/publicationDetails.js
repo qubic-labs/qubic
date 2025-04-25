@@ -202,9 +202,9 @@ const projects = [
   }, 
 ];
 
-const ProjectsTab = () => {
+const ProjectsTab = ({bgColor}) => {
   const [selectedProject, setSelectedProject] = useState(projects[0].name);
-
+  console.log(bgColor);
   return (
     <div id="projects-container">
       {/* <h1>Publications</h1> */}
@@ -215,6 +215,7 @@ const ProjectsTab = () => {
           <button
             key={project.name}
             className={`tab-button ${selectedProject === project.name ? "active" : ""}`}
+            style={{backgroundColor:  `${selectedProject === project.name ? "#80350e" : ""}`}}
             onClick={() => setSelectedProject(project.name)}
           >
             {project.name}
@@ -245,6 +246,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Paper
                     </a>
@@ -255,6 +257,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Code
                     </a>
@@ -265,6 +268,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Demo
                     </a>
@@ -275,6 +279,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Presentation
                     </a>
@@ -285,6 +290,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Poster
                     </a>
@@ -295,6 +301,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       HuggingFace
                     </a>
@@ -305,6 +312,7 @@ const ProjectsTab = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-button"
+                      style={{backgroundColor:  bgColor}}
                     >
                       Cite
                     </a>

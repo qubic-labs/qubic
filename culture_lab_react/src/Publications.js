@@ -10,17 +10,18 @@ import {MdSchool} from "react-icons/md";
 export default function Publication(props) {
   return (
     <AppTheme {...props}>
-      <AppAppBar {props.bgColor}/>
+      <AppAppBar bgColor={props.bgColor}/>
       <Box>
         <Box
           id="hero"
           sx={(theme) => ({
             backgroundPosition: "center",
             height: "100vh",
-            minHeight: "400px" /* Adjust to preferred height */,
+            minHeight: "300px" /* Adjust to preferred height */,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgb(0,0,0,0.5)",
+            padding: "0px",
+            backgroundImage: `url("${process.env.PUBLIC_URL}/bg3.png")`,
 
             ...theme.applyStyles("dark", {
               filter: "invert(1)",
@@ -35,8 +36,7 @@ export default function Publication(props) {
               alignItems: "center",
               minWidth: "100%",
               pt: { xs: 5, sm: 10 },
-              pb: { xs: 15, sm: 25 },
-              background: "#065171",
+              backgroundImage: `url("${process.env.PUBLIC_URL}/bg3.png")`,
               ...theme.applyStyles("dark", {
                 filter: "invert",
               }),
@@ -67,7 +67,7 @@ export default function Publication(props) {
             </Stack>
           </Container>
         </Box>
-        <PublicationDetails />
+        <PublicationDetails bgColor={props.bgColor}/>
       </Box>
       <Divider style={{marginTop: "10%"}} />
       <Footer />
