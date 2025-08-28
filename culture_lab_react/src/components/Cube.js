@@ -3,7 +3,7 @@ import "./Cube.css";
 
 const Cube3D = () => {
   const cubeRef = useRef(null);
-  const [rotation, setRotation] = useState({ x: -30, y: -40 });
+  const [rotation, setRotation] = useState({ x:20, y: 30 });
   const [isDragging, setIsDragging] = useState(false);
   const [startCoords, setStartCoords] = useState({ x: 0, y: 0 });
 

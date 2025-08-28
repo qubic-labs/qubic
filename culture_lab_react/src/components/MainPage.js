@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Testimonials from "./RecentNews";
 import ProjectCarousel from "./Carousel";
 import Cube3D from "./Cube";
+import CardMedia from "@mui/material/CardMedia"; // for image handling
 
 const metaValues = [
   "Meta-Linguistic",
@@ -20,13 +21,14 @@ export default function Hero() {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setMetaText(metaValues[Math.floor(Math.random() * metaValues.length)]);
-    }, 3000); // Changes text every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup function to clear interval
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <Box>
+      {/* Hero Banner */}
       <Box
         id="hero"
         sx={(theme) => ({
@@ -35,7 +37,6 @@ export default function Hero() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundImage: `url("${process.env.PUBLIC_URL}/bg2.png")`,
-          // backgroundColor: "#065171",
           ...theme.applyStyles("dark", {
             filter: "invert(1)",
             backgroundImage: `url("${process.env.PUBLIC_URL}/bg2.png")`,
@@ -68,8 +69,8 @@ export default function Hero() {
                 alignItems: "center",
                 minWidth: "100%",
                 padding: "5%",
-                marginLeft: "35%",
-                paddingBottom: "1%"
+                marginLeft: "37%",
+                paddingBottom: "1%",
               }}
             >
               <Cube3D />
@@ -100,44 +101,46 @@ export default function Hero() {
                 width: { sm: "100%", md: "80%" },
               }}
             >
-              Culture, User, Behavior and Ethics in AI 
+              Culture, User, Behavior and Ethics in AI
             </Typography>
           </Stack>
         </Container>
       </Box>
 
+      {/* Vision + News */}
       <Box paddingTop={3} paddingBottom={8}>
         <Stack
-          direction={{ xs: "column", md: "row" }} // Stack items in a column on small screens and row on larger screens
+          direction={{ xs: "column", md: "column" }}
           spacing={2}
           useFlexGap
           sx={{
-            alignItems: "stretch", // Ensure that the sections take equal height
+            alignItems: "stretch",
             width: "100%",
-            paddingTop: "3%",
+            paddingTop: "2%",
             paddingBottom: "6%",
             paddingX: "3%",
-            height: "100%", // Make sure the stack is taking full available height
+            height: "100%",
           }}
         >
           <Stack
             spacing={2}
             sx={{
-              width: { xs: "100%", md: "50%" },
+              width: { xs: "100%", md: "100%" },
               textAlign: { xs: "center", md: "left" },
-              marginTop: { xs: "1%" },
+              marginTop: { xs: "0%" },
               marginRight: "5%",
-              height: "100%", // Ensure this stack takes full height
-              flex: 1, // This makes the project section take equal height
+              height: "100%",
+              flex: 1,
             }}
           >
             <Typography
-              variant="h1"
+              component="h2"
+              variant="h2"
               fontWeight="500"
               sx={(theme) => ({
-                color: "black",
-                fontSize: "clamp(2rem, 7vw, 2.5rem)",
-                display: "flex",
+                fontWeight: 600,
+                mb: 2,
+                letterSpacing: 0.2,
                 flexDirection: { xs: "column", sm: "row" },
                 alignItems: "center",
                 alignSelf: "center",
@@ -146,22 +149,58 @@ export default function Hero() {
                 }),
               })}
             >
-              Our Projects
+              Our Vision
             </Typography>
-            <ProjectCarousel />
           </Stack>
+
+          {/* 👇 New Team Section */}
+          <Box
+            id="our-team"
+            sx={{
+              py: { xs: 6, md: 10 },
+              px: { xs: 2, md: 6 },
+              bgcolor: "background.default",
+              textAlign: "center",
+            }}
+          >
+            <Typography
+              component="h2"
+              variant="h3"
+              sx={{
+                fontWeight: 600,
+                mb: 4,
+              }}
+            >
+              Our Team
+            </Typography>
+
+            <CardMedia
+              component="img"
+              image={ `${process.env.PUBLIC_URL}/team.jpeg`}
+              alt="Our Team"
+              sx={{
+                maxWidth: "900px",
+                width: "100%",
+                borderRadius: 2,
+                mx: "auto",
+                boxShadow: 3,
+              }}
+            />
+          </Box>
 
           <Stack
             sx={{
-              width: { xs: "100%", md: "50%" },
-              height: "100%", // Ensure this stack takes full height
-              flex: 1, // This ensures equal height
+              width: { xs: "100%", md: "100%" },
+              height: "100%",
+              flex: 1,
             }}
           >
             <Testimonials />
           </Stack>
         </Stack>
       </Box>
+
+
     </Box>
   );
 }
