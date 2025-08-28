@@ -1,6 +1,6 @@
 import React from 'react';
 import './UnderConstruction.css';
-import AppAppBar from './marketing-page/components/AppAppBar';
+import AppAppBar from './components/NavBar';
 import AppTheme from './shared-theme/AppTheme';
 
 export default function NotAvailable(props) {

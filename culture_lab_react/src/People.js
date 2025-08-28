@@ -1,8 +1,8 @@
-import AppAppBar from "./marketing-page/components/AppAppBar";
-import LabTeam from "./marketing-page/components/people";
+import AppAppBar from "./components/NavBar";
+import LabTeam from "./components/people";
 import AppTheme from "./shared-theme/AppTheme";
 import { Typography, Box, Stack, Container } from "@mui/material";
-import Footer from "./marketing-page/components/Footer";
+import Footer from "./components/Footer";
 import Divider from "@mui/material/Divider";
 import {MdEmojiPeople} from "react-icons/md";
 

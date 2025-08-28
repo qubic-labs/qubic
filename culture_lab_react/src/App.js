@@ -1,14 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import Publication from "./Publications";
 import People from "./People";
-import ProjectMM from "./Projects_MM";
+import ProjectMM from "./projects/Projects_MM";
 import NotAvailable from "./NotAvailable";
 import JoinUs from "./JoinUs";
-import Individual from "./marketing-page/components/Individual";
-import ProjectCY from "./ProjectCY";
+import Individual from "./components/IndividualPage";
+import ProjectCY from "./projects/Project_CY";
 
 function App() {
   return (

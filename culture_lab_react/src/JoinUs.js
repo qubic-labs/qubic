@@ -1,7 +1,7 @@
 import React from 'react';
 import './JoinUs.css';
 import AppTheme from './shared-theme/AppTheme';
-import AppAppBar from './marketing-page/components/AppAppBar';
+import AppAppBar from './components/NavBar';
 
 const JoinUs = (props) => {
     return (

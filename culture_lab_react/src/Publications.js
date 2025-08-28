@@ -1,8 +1,8 @@
-import AppAppBar from "./marketing-page/components/AppAppBar";
+import AppAppBar from "./components/NavBar";
 import { Typography, Box, Container, Stack } from "@mui/material";
 import AppTheme from "./shared-theme/AppTheme";
-import PublicationDetails from "./marketing-page/components/publicationDetails";
-import Footer from "./marketing-page/components/Footer";
+import PublicationDetails from "./components/publicationDetails";
+import Footer from "./components/Footer";
 import Divider from "@mui/material/Divider";
 import {MdSchool} from "react-icons/md";
 
