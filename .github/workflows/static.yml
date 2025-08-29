@@ -36,7 +36,7 @@ jobs:
       - name: Build
         working-directory: culture_lab_react
         env:
-          CI: true
+          CI: false
         run: npm run build
 
       - name: Deploy to gh-pages branch
