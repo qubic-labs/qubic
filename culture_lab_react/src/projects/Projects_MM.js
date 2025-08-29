@@ -3,7 +3,8 @@ import AppAppBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import ProjectDescription from "../components/projectDescription";
 import AppTheme from "../shared-theme/AppTheme";
-import { Box, Typography, Container, Divider } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
+import ProjectSections from "../components/ProjectSections";
 
 const projectImage = `${process.env.PUBLIC_URL}/MY_Data.png`;
 const projectTitle = 'Missing Melodies';
@@ -54,84 +55,31 @@ export default function ProjectMM(props) {
                     width: "100%",
                     backgroundColor: "white",
                     textAlign: "center",
-                    padding: "40px 0",
+                    py: 6,
                 }}
             >
                 <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    {projectImage ? (
+                        <Box
+                            component="img"
+                            src={projectImage}
+                            alt={`${projectTitle} cover`}
+                            sx={{ width: 120, height: 120, borderRadius: "12px", objectFit: "cover", mb: 2, boxShadow: 1 }}
+                        />
+                    ) : null}
                     <Typography
-                        variant="h1"
-                        sx={{
-                            color: "#555",
-                            fontSize: "clamp(3rem, 6vw, 4rem)",
-                            textAlign: "center",
-                            fontWeight: "300",
-                        }}
+                        variant="h2"
+                        sx={{ color: "#333", fontSize: "clamp(2.2rem, 5vw, 3rem)", textAlign: "center", fontWeight: 300 }}
                     >
-                        Missing Melodies
+                        {projectTitle}
+                    </Typography>
+                    <Typography variant="body1" sx={{ color: "text.secondary", mt: 1, maxWidth: 900, px: 2 }}>
+                        A study of cultural representation in music AI and methods to improve cross-culture music generation.
                     </Typography>
                 </Container>
             </Box>
 
-            {/* Project description section with image on the left and text wrapping around */}
-            <Container maxWidth={false} sx={{ margin: "1px 0" }}>
-                {sections.map((section, index) => (
-                    <div key={index} style={{ display: "flex", flexDirection: "row", alignItems: "start" }}>
-                        {/* Image and text section */}
-                        <div
-                            style={{
-                                display: "flex",
-                                alignItems: "start",
-                                justifyContent: "space-between",
-                                width: "100%",
-                                flexDirection: "row", // Default for smaller screens
-                                marginLeft: "5%",
-                                marginTop:"2%"
-                            }}
-                        >
-                            <div
-                                style={{
-                                    flex: 1,
-                                    textAlign: "left",
-                                    order: 2, // Ensures text comes first on smaller screens
-                                    marginLeft: "5%",
-                                    width: "max-content",
-                                    marginRight: "5%"
-                                }}
-                            >
-                                <Typography variant="h4" style={{ fontWeight: "200", color: "#333" }}>
-                                    {section.title}
-                                </Typography>
-                                <ul style={{ paddingLeft: "20px", color: "#555" }}>
-                                    {section.content.map((item, idx) => (
-                                        <li key={idx}>
-                                            <Typography variant="body1">{item}</Typography>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            {section.image && (
-                              <div style={{ flexShrink: 0, order: 1 }}>
-                                  <img
-                                      src={section.image}
-                                      alt="Project"
-                                      style={{
-                                          maxWidth: "600px",
-                                          height: "auto",
-                                          borderRadius: "8px",
-                                          marginLeft: "20px",
-                                      }}
-                                  />
-                                  <p style={{ fontSize: "0.9rem", color: "#555", fontStyle: "italic", textAlign: "center", marginTop: "3%" }}>
-                                      {section.imageCaption}
-                                  </p>
-                              </div>
-                            )}
-                        </div>
-                    </div>
-                ))}
-            </Container>
-
-            <Divider sx={{ margin: "40px 0" }} />
+            <ProjectSections sections={sections} alternate={true}/>
 
             <Footer />
         </AppTheme>

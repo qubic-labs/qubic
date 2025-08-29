@@ -8,6 +8,7 @@ import NotAvailable from "./NotAvailable";
 import JoinUs from "./JoinUs";
 import Individual from "./components/IndividualPage";
 import ProjectCY from "./projects/Project_CY";
+import ProjectNew from "./projects/project_new";
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
         <Route path="/individual/:category/:id" element={<Individual />} />
         <Route path="/project/mm" element={<ProjectMM />} />
         <Route path="/project/cy" element={<ProjectCY />} />
-        <Route path="/resources/demos" element={<NotAvailable />} />
+        <Route path="/project/new" element={<ProjectNew />} />
+        {/* <Route path="/resources/demos" element={<NotAvailable />} />
         <Route path="/resources/models" element={<NotAvailable />} />
         <Route path="/resources/tools" element={<NotAvailable />} />
-        <Route path="/resources/datasets" element={<NotAvailable />} />
+        <Route path="/resources/datasets" element={<NotAvailable />} /> */}
         <Route path="/joinus" element={<JoinUs />} />
       </Routes>
     </Router>

@@ -15,7 +15,9 @@ import Sitemark from "./SitemarkIcon";
 import ColorModeIconDropdown from "../shared-theme/ColorModeIconDropdown";
 import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
-import { Menu } from '@mui/material';
+import { Menu, Collapse } from '@mui/material';
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 
 // styled definition
 const StyledToolbar = styled(Toolbar, {
@@ -32,6 +34,7 @@ const StyledToolbar = styled(Toolbar, {
 
 export default function AppAppBar({ bgColor = "#0b3041" }) {
   const [open, setOpen] = React.useState(false);
+  const [mobileProjectsOpen, setMobileProjectsOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -174,6 +177,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
                 >
                   <MenuItem onClick={() => navigate("/project/cy")}>Culturally Yours</MenuItem>
                   <MenuItem onClick={() => navigate("/project/mm")}>Missing Melodies</MenuItem>
+                  <MenuItem onClick={() => navigate("/project/new")}>New Project</MenuItem>
                   {/* <MenuItem onClick={() => navigate("/project/ey")}>Moral Machines</MenuItem>
                   <MenuItem onClick={() => navigate("/project/sc")}>Culture Constructs</MenuItem> */}
                 </Menu>
@@ -284,14 +288,30 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
                   </IconButton>
                 </Box>
 
-                <MenuItem>People</MenuItem>
-                <MenuItem>Projects</MenuItem>
-                <MenuItem>Publications</MenuItem>
-                <MenuItem>Resources - Tools</MenuItem>
-                <MenuItem>Resources - Datasets</MenuItem>
-                <MenuItem>Resources - Models</MenuItem>
-                <MenuItem>Resources - Demos</MenuItem>
-                <MenuItem>Join Us</MenuItem>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/"); }}>Home</MenuItem>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/people"); }}>People</MenuItem>
+                <MenuItem
+                  onClick={() => setMobileProjectsOpen((v) => !v)}
+                  sx={{ display: 'flex', alignItems: 'center' }}
+                >
+                  Projects
+                  <Box sx={{ ml: 'auto', display: 'inline-flex', alignItems: 'center' }}>
+                    {mobileProjectsOpen ? <ExpandLess /> : <ExpandMore />}
+                  </Box>
+                </MenuItem>
+                <Collapse in={mobileProjectsOpen} timeout="auto" unmountOnExit>
+                  <Box sx={{ pl: 2 }}>
+                    <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/project/cy"); }}>Culturally Yours</MenuItem>
+                    <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/project/mm"); }}>Missing Melodies</MenuItem>
+                    <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/project/new"); }}>New Project</MenuItem>
+                  </Box>
+                </Collapse>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/publication"); }}>Publications</MenuItem>
+                {/* <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/resources/tools"); }}>Resources - Tools</MenuItem>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/resources/datasets"); }}>Resources - Datasets</MenuItem>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/resources/models"); }}>Resources - Models</MenuItem>
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/resources/demos"); }}>Resources - Demos</MenuItem> */}
+                <MenuItem onClick={() => { toggleDrawer(false)(); navigate("/joinus"); }}>Join Us</MenuItem>
                 <Divider sx={{ my: 3 }} />
                 {/* <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
