@@ -16,12 +16,12 @@ export default function Project(props) {
                     height: "100%",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    backgroundImage: `url("${process.env.PUBLIC_URL}/project.jpg")`,
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/project.jpg)`,
                     backgroundColor: "rgb(0,0,0,0.5)",
 
                     ...theme.applyStyles("dark", {
                         filter: "invert(1)",
-                        backgroundImage: `url("${process.env.PUBLIC_URL}/project.jpg")`,
+                        backgroundImage: `url(${process.env.PUBLIC_URL}/project.jpg)`,
                     }),
                 })}
             >

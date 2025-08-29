@@ -5,7 +5,7 @@ import ProjectDescription from "../components/projectDescription";
 import AppTheme from "../shared-theme/AppTheme";
 import { Box, Typography, Container, Divider } from "@mui/material";
 
-const projectImage = '/MY_Data.png';
+const projectImage = `${process.env.PUBLIC_URL}/MY_Data.png`;
 const projectTitle = 'Missing Melodies';
 const sections = [
     { 
@@ -25,7 +25,7 @@ const sections = [
             'Methods for assessing LLM cultural knowledge.',
             'Interpretability of cultural representations.',
         ],
-        image: 'inglehert.jpg', // Image for this section
+    image: `${process.env.PUBLIC_URL}/inglehert.jpg`, // Image for this section
         imageCaption: ""
     },
     { 
@@ -45,7 +45,7 @@ const sections = [
             'Cross-cultural content adaptation techniques.',
             'Evaluating and addressing cross-cultural harms.',
         ],
-        image: 'cy.jpeg', // Image for this section
+    image: `${process.env.PUBLIC_URL}/cy.jpeg`, // Image for this section
         imageCaption: ""
     }
 ]
@@ -115,21 +115,23 @@ export default function ProjectCY(props) {
                                     ))}
                                 </ul>
                             </div>
-                            <div style={{ flexShrink: 0, order: 1 }}>
-                                <img
-                                    src={section.image}
-                                    alt="Project"
-                                    style={{
-                                        maxWidth: "500px",
-                                        height: "auto",
-                                        borderRadius: "8px",
-                                        marginLeft: "20px",
-                                    }}
-                                />
-                                <p style={{ fontSize: "0.9rem", color: "#555", fontStyle: "italic", textAlign: "center", marginTop: "3%", maxWidth: "320px" }}>
-                                    {section.imageCaption}
-                                </p>
-                            </div>
+                            {section.image && (
+                              <div style={{ flexShrink: 0, order: 1 }}>
+                                  <img
+                                      src={section.image}
+                                      alt="Project"
+                                      style={{
+                                          maxWidth: "500px",
+                                          height: "auto",
+                                          borderRadius: "8px",
+                                          marginLeft: "20px",
+                                      }}
+                                  />
+                                  <p style={{ fontSize: "0.9rem", color: "#555", fontStyle: "italic", textAlign: "center", marginTop: "3%", maxWidth: "320px" }}>
+                                      {section.imageCaption}
+                                  </p>
+                              </div>
+                            )}
                         </div>
                     </div>
                 ))}

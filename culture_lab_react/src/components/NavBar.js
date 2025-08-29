@@ -84,7 +84,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
             <Box sx={{display:"flex", alignItems:"center"}}>
               <Box
                 component="img"
-                src="logo.svg" // Replace with your image path
+                src={`${process.env.PUBLIC_URL}/logo.svg`}
                 alt="Mission"
                 sx={{
                   width: { xs: "30%", md: "30%" },
@@ -106,7 +106,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
                 }}
                 onClick={() => navigate("/")}
               >
-                QuBIC
+                CUBE
               </Typography>
             </Box>
 
@@ -193,7 +193,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
               >
                 Publications
               </Button>
-              <>
+              {/* <>
                 <Button
                   variant="text"
                   color="info"
@@ -222,7 +222,7 @@ export default function AppAppBar({ bgColor = "#0b3041" }) {
                   <MenuItem onClick={() => navigate("/resources/datasets")}>Datasets</MenuItem>
                   <MenuItem onClick={() => navigate("/resources/models")}>Models</MenuItem>
                 </Menu>
-              </>
+              </> */}
 
               <Button
                 variant="text"

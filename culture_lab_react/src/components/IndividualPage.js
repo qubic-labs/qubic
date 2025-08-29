@@ -33,7 +33,7 @@ const Individual = (props) => {
           position: "relative", // Make the box relative for absolute positioning of the card
           ...theme.applyStyles("dark", {
             filter: "invert(1)",
-            backgroundImage: `url("${process.env.PUBLIC_URL}/people.jpg")`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/people.jpg)`,
           }),
         })}
       >
@@ -80,7 +80,7 @@ const Individual = (props) => {
           <CardMedia
             component="img"
             sx={{ maxHeight: 150, objectFit: "contain", marginRight: "3%", width: "max-content", borderRadius: "2%" }}
-            image={`${process.env.PUBLIC_URL}/${person.profileImage}`}
+            image={person.profileImage?.startsWith('http') ? person.profileImage : `${process.env.PUBLIC_URL}/${person.profileImage || 'thumbnail.webp'}`}
             alt={person.name}
           />
         </Card>

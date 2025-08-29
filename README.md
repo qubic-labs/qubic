@@ -1,1 +1,1 @@
-# qubic
+# The CUBE lab

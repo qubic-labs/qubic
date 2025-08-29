@@ -22,7 +22,7 @@ const LabTeam = () => {
             <CardMedia
               component="img"
               sx={{ maxHeight: "300px", objectFit: "contain", minHeight: "300px" }}
-              image={`${process.env.PUBLIC_URL}/${member.imageUrl}`}
+              image={member.imageUrl?.startsWith('http') ? member.imageUrl : `${process.env.PUBLIC_URL}/${member.imageUrl || 'thumbnail.webp'}`}
               alt={member.name}
             />
             <CardContent>
@@ -72,7 +72,7 @@ const LabTeam = () => {
             <Card>
               <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/${member.imageUrl}`}
+                  src={member.imageUrl?.startsWith('http') ? member.imageUrl : `${process.env.PUBLIC_URL}/${member.imageUrl || 'thumbnail.webp'}`}
                   style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
                   alt={member.name}
                 />
@@ -115,7 +115,7 @@ const LabTeam = () => {
             <Card>
               <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/${member.imageUrl}`}
+                  src={member.imageUrl?.startsWith('http') ? member.imageUrl : `${process.env.PUBLIC_URL}/${member.imageUrl || 'thumbnail.webp'}`}
                   style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
                   alt={member.name}
                 />
@@ -158,7 +158,7 @@ const LabTeam = () => {
             <Card>
               <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/${member.imageUrl}`}
+                  src={member.imageUrl?.startsWith('http') ? member.imageUrl : `${process.env.PUBLIC_URL}/${member.imageUrl || 'thumbnail.webp'}`}
                   style={{ maxWidth: "300px", maxHeight: "300px", minHeight: "300px", objectFit: "contain" }}
                   alt={member.name}
                 />
